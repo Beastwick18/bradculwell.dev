@@ -30,7 +30,7 @@ const AboutMe = () => {
       <div className="absolute w-lvw lg:h-lvh flex">
         <div className="w-1/3 h-lvh max-lg:h-full max-lg:w-0">
           <div style={{ backgroundImage: "url(https://github.com/Beastwick18/nyaa/raw/main/assets/tty.gif)" }} className="absolute w-full h-full max-lg:hidden bg-center bg-cover -z-10"></div>
-          <div className="lg:bg-gradient-to-l lg:from-black lg:to-transparent lg:from-65% w-full h-full max-lg:bg-black lg:w-lvw lg:h-lvh absolute -z-10"></div>
+          <div className="lg:bg-gradient-to-l lg:from-neutral-900 lg:to-transparent lg:from-65% w-full h-full max-lg:bg-neutral-900 lg:w-lvw lg:h-lvh absolute -z-10"></div>
         </div>
         <div className="lg:h-lvh w-2/3 max-lg:w-full bg-transparent flex flex-col items-center">
           <div className="w-3/4 h-full pt-12 flex flex-col gap-8">
