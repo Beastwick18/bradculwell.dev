@@ -40,8 +40,8 @@ const AboutMe = () => {
             </div>
             <div className="lg:overflow-scroll flex flex-col gap-8 text-2xl leading-9 lg:text-justify">
               <p>
-                I'm Brad Culwell, a dedicated student currently enrolled at The University of Texas at Arlington.
-                I'm a Computer Science major who primarily works with languages like C, C++, Python, Rust, and Go, complemented by expertise in front-end technologies such as HTML, CSS, and JavaScript.
+                I&apos;m Brad Culwell, a dedicated student currently enrolled at The University of Texas at Arlington.
+                I&apos;m a Computer Science major who primarily works with languages like C, C++, Python, Rust, and Go, complemented by expertise in front-end technologies such as HTML, CSS, and JavaScript.
               </p>
               <p>
                 Some tools I often use include NeoVim, VSCode, Docker, and Git.
