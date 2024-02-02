@@ -1,7 +1,9 @@
+import MainPage from "@/components/mainpage";
+
 export default function Home() {
   return (
-    <main className="">
-      This is my very complete website!
+    <main className="w-lvw h-lvh">
+      <MainPage />
     </main>
   )
 }
