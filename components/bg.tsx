@@ -16,10 +16,10 @@ const Background = () => {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -500])
   return (
     <>
-      <motion.div style={{ y }} ref={container} className="absolute w-lvw h-lvh duration-0">
+      <motion.div style={{ y }} ref={container} className="will-change-transform absolute w-lvw h-lvh" transition={{ delay: 0 }}>
         <div style={{ backgroundImage: "url(minecraft.png)" }} className="w-lvw h-lvh bg-center bg-cover"></div>
       </motion.div>
-      <motion.div style={{ y: y2 }} className="absolute duration-0 w-lvw h-lvh flex md:flex-row text-center md:text-left flex-col gap-6 items-center justify-center">
+      <motion.div style={{ y: y2 }} transition={{ delay: 0 }} className="will-change-transform absolute w-lvw h-lvh flex md:flex-row text-center md:text-left flex-col gap-6 items-center justify-center">
         <Link href="https://github.com/Beastwick18" className="rounded-full overflow-hidden w-fit h-fit border-white/20 border">
           <Image alt="Profile Picture" src="https://github.com/beastwick18.png?size=200" width={200} height={200} />
         </Link>
