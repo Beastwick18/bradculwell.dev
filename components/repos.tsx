@@ -1,12 +1,13 @@
 "use client"
+
 import { useEffect, useRef, useState } from "react"
 import Repo from "./repo"
-import { useIsVisible } from "@/hooks/useIsVisible"
 import { twMerge } from "tailwind-merge"
+import { useInView } from "framer-motion"
 
 const Repos = () => {
   const ref = useRef(null)
-  const isVisible = useIsVisible(ref);
+  const isVisible = useInView(ref);
   const [animate, setAnimate] = useState("")
   useEffect(() => {
     if (isVisible) {

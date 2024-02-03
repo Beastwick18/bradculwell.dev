@@ -10,16 +10,16 @@ const Background = () => {
   const container = useRef(null)
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start end', 'end start']
+    offset: ['start', 'end start']
   })
-  const y = useTransform(scrollYProgress, [.5, 1], [0, -400])
-  const y2 = useTransform(scrollYProgress, [.5, 1], [0, -500])
+  const y = useTransform(scrollYProgress, [0, 1], [0, -400])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -500])
   return (
     <>
-      <motion.div style={{ y }} ref={container} className="fixed top-0 left-0 w-lvw h-lvh">
+      <motion.div style={{ y }} ref={container} className="absolute w-lvw h-lvh duration-0">
         <div style={{ backgroundImage: "url(minecraft.png)" }} className="w-lvw h-lvh bg-center bg-cover"></div>
       </motion.div>
-      <motion.div style={{ y: y2 }} className="fixed w-lvw h-lvh flex md:flex-row text-center md:text-left flex-col gap-6 items-center justify-center">
+      <motion.div style={{ y: y2 }} className="absolute duration-0 w-lvw h-lvh flex md:flex-row text-center md:text-left flex-col gap-6 items-center justify-center">
         <Link href="https://github.com/Beastwick18" className="rounded-full overflow-hidden w-fit h-fit border-white/20 border">
           <Image alt="Profile Picture" src="https://github.com/beastwick18.png?size=200" width={200} height={200} />
         </Link>

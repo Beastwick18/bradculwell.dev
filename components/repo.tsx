@@ -3,54 +3,15 @@
 import { FaRegStar } from "react-icons/fa"
 import { RiGitRepositoryLine } from "react-icons/ri"
 import Link from "next/link"
-import * as Icons from "react-icons/si"
-import { CgTerminal } from "react-icons/cg"
 import useSWR, { Fetcher } from "swr";
-import { IconType } from "react-icons";
 import Loading from "./loading"
 import { twMerge } from "tailwind-merge";
 import { BiErrorAlt } from "react-icons/bi";
-
-export type Lang = {
-  icon_name: string
-  lang_color: string
-}
+import { SiIcon, languages } from "@/data/repo";
 
 type RepoParams = {
   url: string
   className?: string
-}
-
-const languages: { [name: string]: Lang } = {
-  "C++": {
-    icon_name: "SiCplusplus",
-    lang_color: "magenta"
-  },
-  "Rust": {
-    icon_name: "SiRust",
-    lang_color: "orange"
-  },
-  "Python": {
-    icon_name: "SiPython",
-    lang_color: "cyan"
-  },
-  "Go": {
-    icon_name: "SiGo",
-    lang_color: "cyan"
-  },
-  "Unknown": {
-    icon_name: "SiWindowsterminal",
-    lang_color: "white"
-  }
-}
-
-const SiIcon = (name: string) => {
-  const SiIcons = Icons as { [id: string]: IconType }
-  const IconComponent: any = SiIcons[name]
-  if (SiIcons) {
-    return IconComponent
-  }
-  return CgTerminal;
 }
 
 const fetcher: Fetcher<any> = (input: string | URL | Request, init?: RequestInit<CfProperties<unknown>> | undefined) => fetch(input, init).then(res => res.json())

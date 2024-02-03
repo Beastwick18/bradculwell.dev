@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Lnk from "./lnk"
-import { useIsVisible } from "@/hooks/useIsVisible";
 import { twMerge } from "tailwind-merge";
+import { useInView } from "framer-motion";
 
 const Paragraph = () => {
   const ref = useRef(null)
-  const isVisible = useIsVisible(ref);
+  const isVisible = useInView(ref);
   const [animate, setAnimate] = useState("")
   useEffect(() => {
     if (isVisible) {

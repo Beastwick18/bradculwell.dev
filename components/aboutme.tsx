@@ -1,4 +1,3 @@
-import Lnk from "@/components/lnk";
 import Repos from "./repos";
 import Paragraph from "./paragraph";
 
