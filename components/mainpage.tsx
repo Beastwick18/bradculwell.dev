@@ -1,5 +1,6 @@
+import Image from "next/image"
 import Link from "next/link"
-import { FaChevronCircleDown, FaChevronDown, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
 import { GoChevronDown } from "react-icons/go"
 
 const MainPage = () => {
@@ -9,14 +10,9 @@ const MainPage = () => {
         <div className="fixed top-0 left-0 w-lvw h-lvh">
           <div style={{ backgroundImage: "url(minecraft.png)" }} className="w-lvw h-lvh bg-center bg-cover opacity-75"></div>
         </div>
-        <div className="fixed top-0 left-0 w-full h-24 flex text-3xl font-light text-center justify-center bg-gradient-to-b from-black/60 to-transparent">
-          {/* <Link href="test" className="w-40 h-fit">Test</Link> */}
-          {/* <Link href="test" className="w-40">Test</Link> */}
-          {/* <Link href="test" className="w-40 h-fit border-b text-center">Test</Link> */}
-        </div>
         <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex md:flex-row text-center md:text-left flex-col gap-6 w-full items-center justify-center">
           <Link href="https://github.com/Beastwick18" className="rounded-full overflow-hidden w-fit h-full border-white/20 border">
-            <img src="https://github.com/beastwick18.png?size=200" />
+            <Image alt="Profile Picture" src="https://github.com/beastwick18.png?size=200" width={200} height={200} />
           </Link>
           <div className="w-fit gap-2 flex flex-col font-light text-shadow">
             <p className="md:text-7xl text-5xl">Brad Culwell</p>
