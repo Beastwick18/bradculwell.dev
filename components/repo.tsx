@@ -73,30 +73,33 @@ const Repo: React.FC<RepoParams> = ({ url, className }) => {
       </Link>
     )
   }
-  const name = data["full_name"] ?? "Can't find repo :("
+  const owner = data["owner"]?.["login"] ?? ""
+  const name = data["name"] ?? "Can't find repo :("
   const desc = data["description"] ?? "Can't find description :("
   const stars = data["stargazers_count"] ?? 0
   const language = data["language"] ?? "Unknown"
   const lang = languages[language] ?? languages["Unknown"]
   const Icon = SiIcon(lang.icon_name)
   return (
-    <div className={twMerge("text-lg bg-neutral-800 w-full p-4 rounded-2xl grid-rows-[auto_1fr_auto] grid gap-2 h-full border-solid border-2 border-white/10 shadow-lg shadow-neutral-950", className)}>
+    <Link href={full_link} className={twMerge("text-lg group bg-neutral-800 w-full p-4 rounded-2xl grid-rows-[auto_1fr_auto] grid gap-2 h-full border-solid border-2 border-white/10 shadow-lg shadow-neutral-950", className)}>
       <div className="grid grid-cols-[1fr_auto]">
         <div className="flex items-center gap-2 truncate">
           <RiGitRepositoryLine size={25} />
-          <Link className="text-cyan-500 hover:underline truncate" href={full_link}>{name}</Link>
+          <div className="text-cyan-500 group-hover:underline truncate leading-tight">
+            <span className="max-lg:hidden w-fit">{owner}/</span>{name}
+          </div>
         </div>
-        <Link href={full_link} className="hover:text-yellow-500 flex justify-center gap-1 justify-items-end" >
+        <div className="hover:text-yellow-500 flex justify-center gap-1 justify-items-end" >
           <FaRegStar size={25} />
           <p>{stars}</p>
-        </Link>
+        </div>
       </div>
       <p className="line-clamp-2 leading-tight">{desc}</p>
       <div className="flex items-center gap-2">
         <Icon color={lang.lang_color} />
         <p>{language}</p>
       </div>
-    </div>
+    </Link>
   )
 }
 
