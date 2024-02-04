@@ -6,14 +6,17 @@ import { twMerge } from "tailwind-merge";
 import { useInView } from "framer-motion";
 
 const Paragraph = () => {
+  const fade = "animate-fade-left"
+  const hide = "opacity-0"
+
   const ref = useRef(null)
   const isVisible = useInView(ref);
-  const [animate, setAnimate] = useState("")
+  const [animate, setAnimate] = useState(hide)
   useEffect(() => {
     if (isVisible) {
-      setAnimate("animate-fade-left")
+      setAnimate(fade)
     } else {
-      setAnimate("")
+      setAnimate(hide)
     }
   }, [isVisible])
   return (
@@ -26,7 +29,7 @@ const Paragraph = () => {
         Some tools I often use include NeoVim, VSCode, Docker, and Git.
         I have contributed to open-source projects on GitHub, showcasing a collaborative spirit and commitment to programming.
         With a deep understanding of both Linux and Windows environments, I am poised to make meaningful contributions to the dynamic field of technology.
-        Connect with me on <Lnk href="https://www.linkedin.com/in/steven-culwell-5b92b3239/">LinkedIn</Lnk> or explore my projects on <Lnk href="https://beastwick18.github.io">GitHub</Lnk>.
+        Connect with me on <Lnk href="https://www.linkedin.com/in/steven-culwell-5b92b3239/">LinkedIn</Lnk> or explore my projects on <Lnk href="https://github.com/Beastwick18">GitHub</Lnk>.
       </p>
     </div>
   )

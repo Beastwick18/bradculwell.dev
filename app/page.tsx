@@ -3,7 +3,7 @@ import MainPage from "@/components/mainpage";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <MainPage />
       <div className="relative z-10">
         <AboutMe />

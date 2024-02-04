@@ -6,14 +6,17 @@ import { twMerge } from "tailwind-merge"
 import { useInView } from "framer-motion"
 
 const Repos = () => {
+  const fade = "animate-fade-left"
+  const hide = "opacity-0"
+
   const ref = useRef(null)
   const isVisible = useInView(ref);
-  const [animate, setAnimate] = useState("")
+  const [animate, setAnimate] = useState(hide)
   useEffect(() => {
     if (isVisible) {
-      setAnimate("animate-fade-right")
+      setAnimate(fade)
     } else {
-      setAnimate("")
+      setAnimate(hide)
     }
   }, [isVisible])
   return (
