@@ -1,35 +1,15 @@
-"use client"
+import Black from "@/components/black";
 
-import { useState } from "react"
-import { twMerge } from "tailwind-merge"
+export const metadata = {
+  icons: {
+    icon: '/black.ico',
+  },
+};
 
-const Black = () => {
-  const [isFullscreen, setFullscreen] = useState(false)
-  const [timer, setTimer] = useState<null | NodeJS.Timeout>(null)
-  const [mouse, setMouse] = useState("")
-
-  const toggleFullscreen = () => {
-    if (isFullscreen) {
-      document.exitFullscreen()
-    } else {
-      document.getElementById("screen")?.requestFullscreen()
-    }
-    setFullscreen(!isFullscreen)
-  }
-  const mouseMove = () => {
-    console.log("move")
-    if (timer) {
-      clearTimeout(timer)
-      setMouse("")
-    }
-    setTimer(setTimeout(() => {
-      setMouse("cursor-none")
-    }, 1500))
-  }
-
+const Page = () => {
   return (
-    <div id="screen" className={twMerge("w-lvw  h-lvh", mouse)} onDoubleClick={toggleFullscreen} onMouseMove={mouseMove}></div>
+    <Black />
   )
 }
 
-export default Black
+export default Page
