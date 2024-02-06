@@ -16,7 +16,7 @@ const Paragraph = () => {
     setAnimate(isVisible ? show : hide)
   }, [isVisible])
   return (
-    <div ref={ref} className="lg:px-[8.3333lvw] lg:overflow-y-scroll flex flex-col gap-6 text-2xl leading-9 lg:text-justify">
+    <div ref={ref} className="lg:px-[8.3333lvw] lg:overflow-y-scroll flex flex-col gap-6 text-2xl max-md:text-xl leading-9 text-justify hyphens-auto">
       <p className={twMerge("animate-delay-100", animate)}>
         I&apos;m Brad Culwell, a dedicated student currently enrolled at The University of Texas at Arlington.
         I&apos;m a Computer Science major who primarily works with languages like C, C++, Python, Rust, and Go, complemented by expertise in front-end technologies such as HTML, CSS, and JavaScript.
