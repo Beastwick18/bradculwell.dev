@@ -8,7 +8,7 @@ const MainPage = () => {
       <div className="fixed w-lvw h-lvh top-0 left-0">
         <Background />
       </div>
-      <Link draggable={false} href="#about-me" className="fixed flex justify-center w-full h-1/4 items-end bottom-0 left-0">
+      <Link draggable={false} href="#about-me" className="fixed flex justify-center w-full md:h-1/4 pt-6 h-fit items-end bottom-0 left-0">
         <GoChevronDown size={60} className="animate-bounce" />
       </Link>
     </div>

@@ -30,18 +30,21 @@ const Background = () => {
             <p>University of Texas at Arlington</p>
           </div>
           <div className="flex flex-row gap-2 md:justify-start justify-center">
-            <Link href="https://github.com/Beastwick18">
+            <Link href="https://github.com/Beastwick18" className="duration-200 p-4 group bg-transparent transition-colors hover:bg-neutral-900 flex items-center gap-2 rounded-3xl">
               <SiGithub size={40} />
+              <span className="text-xl max-md:hidden duration-200 max-w-0 group-hover:max-w-20 overflow-hidden transition-all">GitHub</span>
             </Link>
-            <Link href="mailto:bradculwell@pm.me">
+            <Link href="mailto:bradculwell@pm.me" className="duration-200 p-4 group bg-transparent transition-colors hover:bg-violet-500 flex items-center gap-2 rounded-3xl">
               <SiProtonmail size={40} />
+              <span className="text-xl max-md:hidden duration-200 max-w-0 group-hover:max-w-16 overflow-hidden transition-all">Email</span>
             </Link>
-            <Link href="https://www.linkedin.com/in/steven-culwell-5b92b3239/">
+            <Link href="https://www.linkedin.com/in/steven-culwell-5b92b3239/" className="duration-200 p-4 group bg-transparent transition-colors hover:bg-cyan-600 flex items-center gap-2 rounded-3xl">
               <SiLinkedin size={40} />
+              <span className="text-xl max-md:hidden duration-200 max-w-0 group-hover:max-w-24 overflow-hidden transition-all">LinkedIn</span>
             </Link>
           </div>
-        </div>
-      </motion.div>
+        </div >
+      </motion.div >
     </>
   )
 }

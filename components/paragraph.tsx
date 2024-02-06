@@ -6,18 +6,14 @@ import { twMerge } from "tailwind-merge";
 import { useInView } from "framer-motion";
 
 const Paragraph = () => {
-  const fade = "animate-fade-left"
+  const show = "animate-fade-left"
   const hide = "opacity-0"
 
   const ref = useRef(null)
   const isVisible = useInView(ref);
   const [animate, setAnimate] = useState(hide)
   useEffect(() => {
-    if (isVisible) {
-      setAnimate(fade)
-    } else {
-      setAnimate(hide)
-    }
+    setAnimate(isVisible ? show : hide)
   }, [isVisible])
   return (
     <div ref={ref} className="lg:px-[8.3333lvw] lg:overflow-y-scroll flex flex-col gap-6 text-2xl leading-9 lg:text-justify">
