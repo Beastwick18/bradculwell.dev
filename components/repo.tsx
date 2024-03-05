@@ -18,8 +18,9 @@ const fetcher: Fetcher<any> = (input: string | URL | Request, init?: RequestInit
 
 const Repo: React.FC<RepoParams> = ({ url, className }) => {
   const { data, error, isLoading } = useSWR(`https://api.github.com/repos/${url}`, fetcher)
+  const { data: rData, error: rError, isLoading: rLoading } = useSWR(`https://api.github.com/repos/${url}/releases`, fetcher)
   const full_link = `https://github.com/${url}`
-  if (isLoading) {
+  if (isLoading || rLoading) {
     return (
       <Link className="w-full flex justify-center items-center bg h-[149px] bg-transparent rounded-2xl" href={full_link}>
         <Loading className="w-1/4 h-1/4" />
@@ -41,6 +42,7 @@ const Repo: React.FC<RepoParams> = ({ url, className }) => {
   const language = data["language"] ?? "Unknown"
   const lang = languages[language] ?? languages["Unknown"]
   const Icon = SiIcon(lang.icon_name)
+  const release = (rData[0] && rData[0]["tag_name"]) ?? ""
   return (
     <Link href={full_link} className={twMerge("text-lg group bg-neutral-800 w-full p-4 rounded-2xl grid-rows-[auto_1fr_auto] grid gap-2 h-full border-solid border-2 border-white/10 shadow-lg shadow-neutral-950", className)}>
       <div className="grid grid-cols-[1fr_auto]">
@@ -56,9 +58,12 @@ const Repo: React.FC<RepoParams> = ({ url, className }) => {
         </div>
       </div>
       <p className="line-clamp-2 leading-tight">{desc}</p>
-      <div className="flex items-center gap-2">
-        <Icon color={lang.lang_color} />
-        <p>{language}</p>
+      <div className="flex">
+        <div className="w-full flex items-center gap-2">
+          <Icon color={lang.lang_color} />
+          <p>{language}</p>
+        </div>
+        <p>{release}</p>
       </div>
     </Link>
   )
