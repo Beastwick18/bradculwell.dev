@@ -38,7 +38,7 @@ const Background = () => {
               <SiProtonmail size={40} />
               <span className="text-xl max-md:hidden duration-200 max-w-0 group-hover:max-w-16 overflow-hidden transition-all">Email</span>
             </Link>
-            <Link href="https://www.linkedin.com/in/steven-culwell-5b92b3239/" className="duration-200 p-4 group bg-transparent transition-colors hover:bg-cyan-600 flex items-center gap-2 rounded-3xl">
+            <Link href="https://www.linkedin.com/in/sbculwell/" className="duration-200 p-4 group bg-transparent transition-colors hover:bg-cyan-600 flex items-center gap-2 rounded-3xl">
               <SiLinkedin size={40} />
               <span className="text-xl max-md:hidden duration-200 max-w-0 group-hover:max-w-24 overflow-hidden transition-all">LinkedIn</span>
             </Link>

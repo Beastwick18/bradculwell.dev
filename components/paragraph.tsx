@@ -26,7 +26,7 @@ const Paragraph = () => {
         Some tools I often use include NeoVim, VSCode, Docker, and Git.
         I have contributed to open-source projects on GitHub, showcasing a collaborative spirit and commitment to programming.
         With a deep understanding of both Linux and Windows environments, I am poised to make meaningful contributions to the dynamic field of technology.
-        Connect with me on <Lnk href="https://www.linkedin.com/in/steven-culwell-5b92b3239/">LinkedIn</Lnk> or explore my projects on <Lnk href="https://github.com/Beastwick18">GitHub</Lnk>.
+        Connect with me on <Lnk href="https://www.linkedin.com/in/sbculwell/">LinkedIn</Lnk> or explore my projects on <Lnk href="https://github.com/Beastwick18">GitHub</Lnk>.
       </p>
     </div>
   )
