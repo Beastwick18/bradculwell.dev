@@ -18,7 +18,7 @@ const Paragraph = () => {
   return (
     <div ref={ref} className="lg:px-[8.3333lvw] lg:overflow-y-scroll space-y-6 text-2xl max-md:text-xl leading-9 text-justify hyphens-auto">
       <p className={twMerge("animate-delay-100", animate)}>
-        I&apos;m Brad Culwell, a dedicated student currently enrolled at The University of Texas at Arlington.
+        I&apos;m Brad Culwell, a dedicated graduate of The University of Texas at Arlington.
         I&apos;m a Computer Science major who primarily works with languages like C, C++, Python, Rust, and Go.
         I also have experience working with frameworks such as React and Tailwind CSS.
       </p>
